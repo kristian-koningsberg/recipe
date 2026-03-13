@@ -3,7 +3,7 @@ import { client, urlFor } from "@/app/lib/sanity";
 import Image from "next/image";
 import React, { Suspense } from "react";
 import DelayedRender from "../Components/DelayedRender";
-
+// Fetch data for a specific recipe based on the slug
 const getData = async (slug: string) => {
   const query = `*[_type == "recipe" && slug.current == "${slug}"][0]{
     _id,
